@@ -4,52 +4,12 @@
 <head>
     <meta charset="utf-8">
     <title>D3 Force APEX Plugin</title>
-    <link  href="css/d3-force-2.0.0.css" rel="stylesheet" type="text/css">
-    <script src="lib/d3/d3-3.5.6.min.js"></script>
-    <script src="js/d3-force-2.0.0.min.js"></script>
 </head>
 
-<body onload="example.start()">
-    <div id="graph"></div>
-    <p>This D3 force implementation uses the visualization library from <a href="http://d3js.org/"
-        target="d3-js-org">http://d3js.org/</a> to render a network layout and has the following features:</p>
-    <ul>
-        <li>Can run standalone like on this page or as a plugin in Oracle APEX</li>
-        <li>Interactive customization wizard</li>
-        <li>Source data can be a XML string, JSON string or JavaScript Object (JSON)</li>
-        <li>Link directions are visible and self references are rendered in a nice way</li>
-        <li>Node sizes are calculated between given min and max values depending on the SIZEVALUE attribute in your
-            source data</li>
-        <li>Node colors are assigned depending on the given COLORVALUE attribute in your source data - if you provide a
-            IMAGE attribute for a node, then the image is used instead of a fill color</li>
-        <li>Optional tooltips depending on the given INFOSTRING attribute in your source data</li>
-        <li>If you have a node attribute called LINK, you can define on which event the URL should be called - default
-            is dblclick - try it out by double clicking the node KING</li>
-        <li>Nodes can be pinned and the current positions can be saved and loaded to predefine a layout - optionally
-            you can align the nodes to a grid when they are dragged around</li>
-        <li>With the lasso mode you can select nodes and implement a graphical multi select</li>
-        <li>The graph can be zoomed between the two configured min and max scale factors and is callable with the
-            API</li>
-        <li>There is a JavaScript API to interact with the graph, also including eight events (node click, node double
-            click, node contextmenu, node mouse enter, node mouse leave, link click, lasso start, lasso end)</li>
-        <li>NEW in 2.0.0: Automatic label placement after force end to prevent overlapping (optional, per default switched off),
-            links can now have a COLOR and a INFOSTRING attribute - see also the changelog</li>
-    </ul>
-    <p>Download and documentation on <a href="https://github.com/ogobrecht/d3-force-apex-plugin"
-        target="d3-force-apex-plugin">GitHub</a>.
-    <p>Happy networking!</p>
-    <p>Ottmar</p>
-    <script>
-        var example = netGobrechtsD3Force('graph',
-                {
-                    debug: true,
-                    lassoMode: true,
-                    onLassoEndFunction: function(event, data){ console.log('Lasso end data:', data); },
-                    onLinkClickFunction: function(event, data){ console.log('Link click triggered - data:', data); },
-                    onNodeClickFunction: function(event, data){ console.log('Node click triggered - data:', data); },
-                    zoomMode: true
-                });
-    </script>
+<body>
+    <p>This online demo and the documentation moved with v2.0.1 to
+        <a href="https://gobrechts.net/wiki/projects/d3-force-apex-plugin">https://gobrechts.net/wiki/projects/d3-force-apex-plugin</a>.
+    </p>
 </body>
 
 </html>
